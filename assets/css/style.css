@@ -271,6 +271,7 @@ footer, .push {
 
 .gallery-item {
   padding:0 15px;
+  margin-bottom: 30px;
 }
 
 .frame {
@@ -280,8 +281,8 @@ footer, .push {
 }
 
 .gallery-item img {
-  width:auto;
-  height:100%;
+  width:100%;
+  max-width:none;
   position:absolute;
   z-index:1;
   transform:scale(1);
@@ -310,7 +311,11 @@ footer, .push {
   .gallery-item {
     width:50%;
     float:left;
-    margin-bottom:30px;
+  }
+
+  .gallery-item img {
+    height:100%;
+    width:auto;
   }
 }
 
