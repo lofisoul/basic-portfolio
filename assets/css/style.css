@@ -103,8 +103,10 @@ a:hover {
 
 header {
   background:#fff;
-  border-bottom:2px solid #ccc;
+  box-shadow:
   text-align: center;
+  -webkit-box-shadow: 0 10px 10px -10px rgba(0,0,0,.25);
+box-shadow: 0 10px 10px -10px rgba(0,0,0,.25);
 }
 
 .logo {
@@ -349,4 +351,30 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
   background:#777;
+}
+
+/*text hover effects*/
+header ul > li > a {
+  position:relative;
+}
+
+header ul > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #4aaaa5;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+header ul > li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
