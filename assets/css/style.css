@@ -1,0 +1,321 @@
+/*
+Teal color (used for headings and backgrounds): #4aaaa5
+Regular font color (used for paragraphs and all text besides the headings): #777777
+Main header background color: #ffffff
+Main header border color: #cccccc
+Footer background color: #666666
+Main content background color: #ffffff
+Main content border color: #dddddd
+*/
+
+* {
+  -webkit-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background:url(../images/pw_pattern.png);
+  font-family: 'lato', serif;
+  font-size:16px;
+  font-size:1.6rem;
+  color:#777;
+}
+
+.clearfix:before,
+.clearfix::after,
+.row:before,
+.row::after {
+  display:table;
+  content:"";
+}
+
+.clearfix::after,
+.row::after {
+  clear:both;
+}
+
+.row {
+  margin-left:-15px;
+  margin-right:-15px;
+}
+
+
+.container {
+  padding-left:15px;
+  padding-right:15px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+.container {
+    width: 750px;
+}
+}
+
+@media (min-width: 992px) {
+.container {
+    width: 970px;
+}
+}
+
+h1, h2, h3 {
+  font-family: 'lora', serif;
+  color:#4aaaa5;
+  border-bottom:1px solid #ccc;
+  padding-bottom:10px;
+  margin-bottom:20px;
+}
+
+h1 {
+  font-size:28px;
+  font-size:2.8rem;
+}
+
+h2 {
+  font-size:20px;
+  font-size:2rem;
+}
+
+h3 {
+  font-size:18px;
+  font-size:1.8rem;
+}
+
+p {
+  margin-bottom:20px;
+}
+
+a {
+  color:#4aaaa5;
+  text-decoration: none;
+  transition:color .4s ease-in-out;
+}
+
+a:hover {
+  color:#777;
+}
+
+header {
+  background:#fff;
+  border-bottom:2px solid #ccc;
+}
+
+.logo {
+  padding-left:30px;
+  padding-right:30px;
+  background:#4aaaa5;
+  color:#fff;
+  font-family: ultra, serif;
+  font-size:40px;
+  font-size:4rem;
+  text-decoration:none;
+  height:60px;
+  display:block;
+  text-align:center;
+  line-height:60px;
+  transition: background .4s ease-in-out;
+}
+
+.logo:hover {
+  color:#fff;
+  background:#777;
+}
+
+header ul {
+  text-align:center;
+}
+
+header ul > li {
+  display:block;
+}
+
+header ul > li > a {
+  color:#777;
+}
+
+header ul > li > a:hover {
+  color:#4aaaa5;
+}
+
+@media screen and (min-width:768px) {
+  .logo {
+    float:left;
+  }
+
+  header ul {
+    display:inline-block;
+    float:right;
+    margin-top:20px;
+  }
+
+  header ul > li {
+    display:inline-block;
+    padding:0 10px;
+    position:relative;
+    border-right:1px solid #ccc;
+  }
+
+  header ul > li:last-child {
+    border-right:0;
+  }
+
+}
+
+.main {
+  margin:35px auto 70px;
+}
+
+.content, .sidebar {
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.inner {
+  background:#fff;
+  border:1px solid #ccc;
+  padding:15px;
+}
+
+.content {
+  margin-bottom:30px;
+}
+
+.content img {
+  width:100%;
+  display:block;
+  max-width:300px;
+  margin:0 auto 20px;
+}
+
+.sr-only {
+  position:absolute;
+  visibility: hidden;
+  left:-99999px;
+  height:0;
+}
+
+.sidebar ul {
+  margin-left: -10px;
+  margin-right:-10px;
+}
+
+.sidebar ul > li {
+  width:33.33333333%;
+  float:left;
+  padding:0 10px;
+}
+
+.sidebar ul > li > a > img {
+  trasform:scale(1);
+  transition: transform .1s ease-in-out;
+  width: 100%;
+}
+
+.sidebar ul > li > a:hover > img {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width:768px) {
+  .content, .sidebar {
+    float:left;
+  }
+
+  .inner {
+    padding:35px;
+  }
+
+  .content {
+    width:66.66666667%;
+    margin-bottom: 0;
+  }
+
+  .content img {
+    float:left;
+    width:30%;
+    margin-right:30px;
+    max-width:none;
+  }
+
+  .sidebar {
+    width:33.33333333%;
+  }
+}
+
+footer {
+  background:#777;
+  text-align:center;
+  border-top:4px solid #4aaaa5;
+  padding:30px 0;
+  color:#fff;
+}
+
+.gallery-item {
+  padding:0 15px;
+}
+
+.frame {
+  overflow:hidden;
+  position:relative;
+  height:200px;
+}
+
+.gallery-item img {
+  width:auto;
+  height:100%;
+  position:absolute;
+  z-index:1;
+  transform:scale(1);
+  transition: transform .1s ease-in-out;
+}
+
+.gallery-item:hover img {
+  transform:scale(1.2);
+}
+
+.gallery-item h3 {
+  border-bottom:0;
+  margin:0;
+  text-align:center;
+  background:#4aaaa5;
+  color:#fff;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:100%;
+  padding:15px 0;
+  z-index:2;
+}
+
+@media screen and (min-width:768px) {
+  .gallery-item {
+    width:50%;
+    float:left;
+    margin-bottom:30px;
+  }
+}
+
+form label {
+  display:block;
+  margin-bottom:10px;
+}
+
+form input,
+form textarea {
+  width:100%;
+  margin-bottom:20px;
+  border:1px solid #ccc;
+}
+
+form input {
+  height:30px;
+  line-height: 30px;
+}
+
+form textarea {
+  height:200px;
+}
