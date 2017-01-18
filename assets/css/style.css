@@ -306,6 +306,7 @@ form label {
 
 form input,
 form textarea {
+  display:block;
   width:100%;
   margin-bottom:20px;
   border:1px solid #ccc;
@@ -318,4 +319,21 @@ form input {
 
 form textarea {
   height:200px;
+}
+
+form input[type="submit"] {
+  display:inline-block;
+  padding:10px 20px;
+  background:#4aaaa5;
+  color:#fff;
+  font-family: 'lora', serif;
+  transition:background .4s ease-in-out;
+  height:auto;
+  border:0;
+  width:auto;
+  font-size:18px;
+}
+
+form input[type="submit"]:hover {
+  background:#777;
 }
