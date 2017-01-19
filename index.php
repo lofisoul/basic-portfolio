@@ -1,1 +1,1 @@
-<? php include_once('https://github.com/lofisoul/basic-portfolio'); ?>
+<? php include_once('index.html'); ?>
