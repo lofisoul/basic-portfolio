@@ -116,8 +116,8 @@ box-shadow: 0 10px 10px -10px rgba(0,0,0,.25);
   background:#4aaaa5;
   color:#fff;
   font-family: ultra, serif;
-  font-size:40px;
-  font-size:4rem;
+  font-size:30px;
+  font-size:3rem;
   text-decoration:none;
   height:60px;
   display:block;
@@ -131,9 +131,14 @@ box-shadow: 0 10px 10px -10px rgba(0,0,0,.25);
   background: #A3D39C;
 }
 
+@media screen and (min-width:450px) {
+  .logo {
+    font-size:40px;
+    font-size:4rem;
+  }
+}
 
 header ul {
-  display:inline-block;
   text-align:center;
   margin:10px auto;
 }
